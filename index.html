@@ -11,7 +11,7 @@
     <!-- FONTS STARTS HERE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- FONTAWESOME LIBRARY -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -21,15 +21,15 @@
 
 <body>
     <div class="main-container">
-        <!-- HEADER STARTS HERE -->
-        <header>
-            <nav>
-                <div>
-                    <a href="index.html" class="lien-icone"><img src="images/logo/Booki.png" alt="Logo Booki" /></a>
-                </div>
-                <div>
-                    <a href="index.html">Hébergements</a>
-                    <a href="index.html">Activités</a>
+        <!-- HEADER -->
+        <header class="header-section">
+            <nav class="navbar">
+                <a href="#" class="nav-logo">
+                    <img src="images/logo/Booki.png" alt="Logo Booki" />
+                </a>
+                <div class="nav-menu">
+                    <a href="#">Hébergements</a>
+                    <a href="#">Activités</a>
                 </div>
             </nav>
         </header>
@@ -37,24 +37,24 @@
         <!-- MAIN STARTS HERE -->
         <main>
             <!-- TOP SECTION STARTS HERE -->
-            <section>
-                <div>
+            <section class="search-section">
+                <div class="headline">
                     <h1>Trouvez votre hébergement pour des vacances de rève</h1>
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div>
-                    <label for="town-searchbar"><i class="fa-solid fa-location-dot"></i></label>
+                <div class="searchbar">
+                    <label class="searchbar-label" for="town-searchbar"><i class="fa-solid fa-location-dot"></i></label>
                     <input type="search" id="town-searchbar" name="town-searchbar" placeholder="Marseille, France"><button>Rechercher</button>
                 </div>
-                <div>
+                <div class="filterbar">
                     <h4>Filtres</h4>
                     <button type="button"><i class="fa-solid fa-money-bill-wave"></i>Économique</button>
                     <button type="button"><i class="fa-solid fa-person"></i></i>Familial</button>
                     <button type="button"><i class="fa-sharp fa-solid fa-heart"></i></i>Romantique</button>
                     <button type="button"><i class="fa-solid fa-fire"></i></i>Nos pépites</button>
                 </div>
-                <div>
-                    <p><i class="fa-regular fa-circle-info"></i>fe</p>
+                <div class="infobar">
+                    <p><i class="fa-regular fa-circle-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
                 </div> 
             </section>
 
