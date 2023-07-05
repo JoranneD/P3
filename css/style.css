@@ -71,12 +71,109 @@ body {
     width: 65%;
 }
 
+/****** MES MODIFS *************************************************************************/
+
+/* HEADER AND NAV */
+.header-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 50%;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    padding-top: 35px;
+    margin: 35px;
+}
+
+.nav-menu a:hover {
+    border-top: 3px solid red;
+}
+
+/* SEARCH SECTION */
+
+.search-section {
+    justify-content: space-between;
+}
+
+.headline h1 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.headline p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.searchbar {
+    /* margin: 35px; */
+}
+
+.searchbar-label, .searchbar input, .searchbar button {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.searchbar-label {
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: brown; 
+}
+
+.searchbar input {
+    padding: 8.5px;
+    border: none;
+    /* margin: 8.5px; */
+}
+
+.searchbar i, .searchbar ::placeholder {
+    color: black; 
+}
+
+.searchbar button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: brown;
+    color: white;
+    border: none;
+}
+
+.filterbar {
+    background-color: grey;
+}
+
+.infobar {
+    background-color: grey;
+}
+
+
+
+
+/******************************************************************************************/
+
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
 }
 
-.populaires-title {
+.populaires-title .hebergements-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,3 +257,13 @@ body {
 @media (max-width: 767.98px) {
     /* ... */
 }
+
+/****** MINE********************************************************** ***********/
+
+/****** NAVIGATION BAR *********/
+
+
+
+
+/****** TOP SECTION ******/
+
