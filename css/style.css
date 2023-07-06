@@ -23,6 +23,11 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    /* MINE - portion de code permettant d'ajouter un gap entre le header et le main*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .section-title {
@@ -77,105 +82,165 @@ body {
 .header-section {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    margin-bottom: 30px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 79px;
 }
 
-.nav-logo img {
-    width: 50%;
+.nav-logo, .nav-logo img {
+    width: 50px;
 }
 
-.nav-menu a {
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+   
+    gap: 50px;
+    background-color: gray;
+   
+    
+   
+}
+
+.herbergements-link, .activites-link {
+    
     text-decoration: none;
     font-size: 16px;
-    padding-top: 35px;
-    margin: 35px;
+    
+    /* padding-top: 35px;
+    margin: 35px; */
+    color: black;
 }
 
-.nav-menu a:hover {
-    border-top: 3px solid red;
+.herbergements-link:hover, .activites-link:hover {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
 }
 
 /* SEARCH SECTION */
 
 .search-section {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 35px;
 }
 
+.search-section * { /* permet d'"enlever" les marges des enfants de .searchsection */
+    margin: 0;
+}
+
+/* Headline */
 .headline h1 {
     font-weight: bold;
     font-size: 22px;
-    margin-bottom: 5px;
 }
 
 .headline p {
     font-weight: 400;
     font-size: 16px;
-    margin-top: 0;
 }
 
+/* Form */
 .searchbar {
-    flex-direction: ;
-}
-
-.searchbar-label, .searchbar input, .searchbar button {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    /* margin-inline: 2px; */
-}
-
-.searchbar-label, .searchbar button {
-    padding: 18px 20px 18px 20px; /* sens : haut, droite, bas, gauche   */
-    border: none;
-    margin-right: -3px;
-}
-
-.searchbar-label, .searchbar input {
-    
+    display: flex;
+    flex-direction: row;
+    height: 50px;
 }
 
 .searchbar-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
     border-radius: 15px 0px 0px 15px;
     background-color: #F2F2F2;
 }
 
-.searchbar input {
-    padding: 16.5px;
-    border-color: #F2F2F2;
-    border-top: #F2F2F2;
-    border-left: #F2F2F2;
+.searchbar-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #F2F2F2; /* BORDER-COLOR */
+}
+
+.searchbar-button {
+    width: 132px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+    color: white;
+    border-color: #0065FC; /* BORDER-COLOR */
+}
+
+.searchbar-label, .searchbar-input, .searchbar-button {
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.searchbar-input, .searchbar-button {
+    text-align: center;
 }
 
 .searchbar i, .searchbar ::placeholder {
     color: black; 
 }
 
-input:focus::placeholder {
+.searchbar-input:focus::placeholder {
     color: transparent;
-    border: none;
-  }
-
-.searchbar button {
-    border-radius: 0px 15px 15px 0px;
-    background-color: #0065FC;
-    color: white;
 }
 
+.searchbar-input:focus-visible {
+    outline: none;
+}
+
+/* Filters */
 .filterbar {
-    background-color: grey;
+    height: 50px;
 }
 
-.infobar {
-    background-color: grey;
+.filterbar-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
 }
 
+.filterbar-title {
+    font-size: 18px;
+}
+
+.filterbar-button {
+    width: 173px;
+    border-radius: 25px;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    border-color: #F2F2F2; /* BORDER-COLOR */
+    background-color: white;
+}
+
+.filterbar-button:hover {
+    background-color: #DEEBFF;
+}
+
+.filterbar-button i {
+    padding-right: 10px;
+}
+
+.infoline-text {
+    font-size: 16px;
+}
+
+.infoline i {
+    padding-right: 20px;
+}
 
 
 
