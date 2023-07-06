@@ -121,37 +121,51 @@ body {
 }
 
 .searchbar {
-    /* margin: 35px; */
+    flex-direction: ;
 }
 
 .searchbar-label, .searchbar input, .searchbar button {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    /* margin-inline: 2px; */
+}
+
+.searchbar-label, .searchbar button {
+    padding: 18px 20px 18px 20px; /* sens : haut, droite, bas, gauche   */
+    border: none;
+    margin-right: -3px;
+}
+
+.searchbar-label, .searchbar input {
+    
 }
 
 .searchbar-label {
-    padding: 10px 20px 10px 20px;
     border-radius: 15px 0px 0px 15px;
-    background-color: brown; 
+    background-color: #F2F2F2;
 }
 
 .searchbar input {
-    padding: 8.5px;
-    border: none;
-    /* margin: 8.5px; */
+    padding: 16.5px;
+    border-color: #F2F2F2;
+    border-top: #F2F2F2;
+    border-left: #F2F2F2;
 }
 
 .searchbar i, .searchbar ::placeholder {
     color: black; 
 }
 
-.searchbar button {
-    padding: 10px 20px 10px 20px;
-    border-radius: 0px 15px 15px 0px;
-    background-color: brown;
-    color: white;
+input:focus::placeholder {
+    color: transparent;
     border: none;
+  }
+
+.searchbar button {
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+    color: white;
 }
 
 .filterbar {
@@ -257,13 +271,3 @@ body {
 @media (max-width: 767.98px) {
     /* ... */
 }
-
-/****** MINE********************************************************** ***********/
-
-/****** NAVIGATION BAR *********/
-
-
-
-
-/****** TOP SECTION ******/
-
