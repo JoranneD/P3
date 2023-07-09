@@ -23,11 +23,18 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
-    /* MINE - portion de code permettant d'ajouter un gap entre le header et le main*/
+    /* MINE - code permettant d'ajouter des gaps entre le header, le main et le footer */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
+}
+
+/* MINE - code permettant d'ajouter un gap entre search-section et hebergements-and-populaires */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .section-title {
@@ -74,6 +81,53 @@ body {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    /* MINE - code permettant  */
+    display: flex;
+    flex-direction: column;
+}
+
+/* MINE - code permettant d'ajouter un gap entre search-section et hebergements-and-populaires */
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 33px;
+    width: 30%; /* 33% est la dimension des img déja donnée ds le code */
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
 }
 
 /****** MES MODIFS *************************************************************************/
@@ -92,27 +146,20 @@ body {
 }
 
 .nav-logo, .nav-logo img {
-    width: 50px;
+    width: 61px;
 }
 
 .nav-menu {
     display: flex;
     flex-direction: row;
-   
+    height : 100%;
     gap: 50px;
-    background-color: gray;
-   
-    
-   
 }
 
-.herbergements-link, .activites-link {
-    
+.herbergements-link, .activites-link, .herbergements-linkbox, .activites-linkbox {
     text-decoration: none;
     font-size: 16px;
-    
-    /* padding-top: 35px;
-    margin: 35px; */
+    padding-top: 16px;
     color: black;
 }
 
@@ -165,7 +212,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: #F2F2F2; /* BORDER-COLOR */
+    border: 1px solid  #F2F2F2;
 }
 
 .searchbar-button {
@@ -173,7 +220,7 @@ body {
     border-radius: 0px 15px 15px 0px;
     background-color: #0065FC;
     color: white;
-    border-color: #0065FC; /* BORDER-COLOR */
+    border: none;
 }
 
 .searchbar-label, .searchbar-input, .searchbar-button {
@@ -222,7 +269,7 @@ body {
     height: 100%;
     font-size: 17px;
     font-weight: bold;
-    border-color: #F2F2F2; /* BORDER-COLOR */
+    border: 1px solid  #F2F2F2;
     background-color: white;
 }
 
