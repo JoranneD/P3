@@ -84,6 +84,7 @@ body {
     /* MINE - code permettant  */
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 
 /* MINE - code permettant d'ajouter un gap entre search-section et hebergements-and-populaires */
@@ -91,13 +92,13 @@ body {
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;    
+    justify-content: space-between;
+    row-gap: 30px;    
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    margin-top: 33px;
     width: 30%; /* 33% est la dimension des img déja donnée ds le code */
 }
 
@@ -128,6 +129,10 @@ body {
 
 .hebergements-cards .card-rating {
     margin-bottom: 5px;
+}
+
+.show-more {
+    margin: 0;;
 }
 
 /****** MES MODIFS *************************************************************************/
