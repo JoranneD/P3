@@ -135,6 +135,24 @@ body {
     margin: 0;;
 }
 
+/****** Footer ***********/
+.footer-section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #D9D9D9;
+    row-gap: 15px;
+}
+
+.footer-column {
+    width: 33%;
+    padding: 20px;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 18px;;
+}
+
 /****** Activités ***********/
 .activities {
     display: flex;
@@ -171,6 +189,7 @@ body {
 .activities-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+    flex-wrap: nowrap;
 }
 
 .activities-cards .card-subtitle {
