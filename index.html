@@ -23,22 +23,20 @@
     <div class="main-container">
         <!-- HEADER -->
         <header class="header-section">
+            <img class="header-logo" src="images/logo/Booki.png" alt="Logo Booki" />
             <nav class="navbar">
-                <a href="#" class="nav-logo">
-                    <img src="images/logo/Booki.png" alt="Logo Booki" />
-                </a>
-                <div class="nav-menu">
-                    <div class="herbergements-linkbox">
-                         <a class="herbergements-link" href="#">Hébergements</a>
-                    </div>
-                    <div class="activites-linkbox">
-                        <a class="activites-link" href="#">Activités</a>
-                    </div>
-                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                         <a class="nav-link-accomodations" href="#accomodations">Hébergements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-activities" href="#activities">Activités</a>
+                    </li>
+                </ul>
             </nav>
         </header>
 
-        <!-- MAIN STARTS HERE -->
+        <!-- MAIN -->
         <main>
             <div class="main-content">
                 <!-- TOP SECTION STARTS HERE -->
@@ -67,13 +65,13 @@
                 </section>
 
                 <!-- MIDDLE SECTION STARTS HERE -->
-                <div class="hebergements-and-populaires">
+                <div class="hebergements-and-populaires" id="accomodations"> <!-- accomodations-section -->
                     <!-- MAIN BLOCK STARTS HERE -->
-                    <section class="hebergements">
-                        <div class="populaires-title">
+                    <section class="hebergements"> <!-- accomodations -->
+                        <div class="populaires-title"> <!-- accomodations-title -->
                             <h2 class="section-title">Hébergements à Marseille</h2>
                         </div>
-                        <div class="hebergements-cards">
+                        <div class="hebergements-cards"> <!-- accomodations-cards -->
                             <article class="card">
                                 <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel montrant un lit">
                                 <div class="card-content">
@@ -244,7 +242,7 @@
                 </div>
 
                 <!-- BOTTOM SECTION STARTS HERE -->
-                <section class="activities">
+                <section class="activities" id="activities">
                     <div class="activities-title">
                         <h2 class="section-title">Activités à Marseille</h2>
                     </div>

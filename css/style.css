@@ -1,4 +1,4 @@
-/****** General ***********/
+/****** GENERAL ***********/
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -13,6 +13,8 @@
     color: var(--main-color);
 }
 
+
+/****** BODY ***********/
 body {
     display: flex;
     justify-content: center;
@@ -29,6 +31,170 @@ body {
     justify-content: space-between;
     gap: 30px;
 }
+
+
+/****** HEADER ***********/
+.header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+}
+
+.header-logo {
+    width: 61px;
+    height: 19px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 50px;
+    list-style-type: none; 
+}
+
+.nav-link-accomodations, .nav-link-activities {
+    display: block;
+    height: 76px; /* plus petit que 79px pour bloquer le decalage au survol */
+    border-top: 3px solid white; /* bloque le leger décalage au survol */
+    line-height: 50px; /* 40 */
+    text-decoration: none;
+    font-size: 16px;
+    padding-top: 16px;
+    color: black;
+}
+
+.nav-link-accomodations:hover, .nav-link-activities:hover {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
+}
+
+.fa-xs.fa-solid.fa-star.neutral-star {
+    color: #F2F2F2;
+}
+
+
+/****** SEARCH SECTION ***********/
+.search-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.search-section * { /* permet d'"enlever" les marges des enfants de .searchsection */
+    margin: 0;
+}
+
+/* Headline */
+.headline h1 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.headline p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Form */
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.searchbar-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: #F2F2F2;
+}
+
+.searchbar-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid  #F2F2F2;
+}
+
+.searchbar-button {
+    width: 132px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+}
+
+.searchbar-label, .searchbar-input, .searchbar-button {
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.searchbar-input, .searchbar-button {
+    text-align: center;
+}
+
+.searchbar i, .searchbar ::placeholder {
+    color: black; 
+}
+
+.searchbar-input:focus::placeholder {
+    color: transparent;
+}
+
+.searchbar-input:focus-visible {
+    outline: none;
+}
+
+/* Filters */
+.filterbar {
+    height: 50px;
+}
+
+.filterbar-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
+}
+
+.filterbar-title {
+    font-size: 18px;
+}
+
+.filterbar-button {
+    width: 173px;
+    border-radius: 25px;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid  #F2F2F2;
+    background-color: white;
+}
+
+.filterbar-button:hover {
+    background-color: #DEEBFF;
+}
+
+.filterbar-button i {
+    padding-right: 10px;
+}
+
+.infoline-text {
+    font-size: 16px;
+}
+
+.infoline i {
+    padding-right: 20px;
+}
+
+
 
 /* MINE - code permettant d'ajouter un gap entre search-section et hebergements-and-populaires */
 .main-content {
@@ -198,166 +364,7 @@ body {
 
 /****** MES MODIFS *************************************************************************/
 
-/* HEADER AND NAV */
-.header-section {
-    display: flex;
-    flex-direction: column;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 79px;
-}
-
-.nav-logo, .nav-logo img {
-    width: 61px;
-}
-
-.nav-menu {
-    display: flex;
-    flex-direction: row;
-    height : 100%;
-    gap: 50px;
-}
-
-.herbergements-link, .activites-link, .herbergements-linkbox, .activites-linkbox {
-    text-decoration: none;
-    font-size: 16px;
-    padding-top: 16px;
-    color: black;
-}
-
-.herbergements-link:hover, .activites-link:hover {
-    border-top: 3px solid #0065FC;
-    color: #0065FC;
-}
-
-.fa-xs.fa-solid.fa-star.neutral-star {
-    color: #F2F2F2;
-}
-
-/* SEARCH SECTION */
-
-.search-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 35px;
-}
-
-.search-section * { /* permet d'"enlever" les marges des enfants de .searchsection */
-    margin: 0;
-}
-
-/* Headline */
-.headline h1 {
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.headline p {
-    font-weight: 400;
-    font-size: 16px;
-}
-
-/* Form */
-.searchbar {
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-}
-
-.searchbar-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    border-radius: 15px 0px 0px 15px;
-    background-color: #F2F2F2;
-}
-
-.searchbar-input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid  #F2F2F2;
-}
-
-.searchbar-button {
-    width: 132px;
-    border-radius: 0px 15px 15px 0px;
-    background-color: #0065FC;
-    color: white;
-    border: none;
-}
-
-.searchbar-label, .searchbar-input, .searchbar-button {
-    height: 100%;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.searchbar-input, .searchbar-button {
-    text-align: center;
-}
-
-.searchbar i, .searchbar ::placeholder {
-    color: black; 
-}
-
-.searchbar-input:focus::placeholder {
-    color: transparent;
-}
-
-.searchbar-input:focus-visible {
-    outline: none;
-}
-
-/* Filters */
-.filterbar {
-    height: 50px;
-}
-
-.filterbar-rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    gap: 15px;
-}
-
-.filterbar-title {
-    font-size: 18px;
-}
-
-.filterbar-button {
-    width: 173px;
-    border-radius: 25px;
-    height: 100%;
-    font-size: 17px;
-    font-weight: bold;
-    border: 1px solid  #F2F2F2;
-    background-color: white;
-}
-
-.filterbar-button:hover {
-    background-color: #DEEBFF;
-}
-
-.filterbar-button i {
-    padding-right: 10px;
-}
-
-.infoline-text {
-    font-size: 16px;
-}
-
-.infoline i {
-    padding-right: 20px;
-}
 
 
 
