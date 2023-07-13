@@ -15,13 +15,7 @@
 
 
 /****** BODY ***********/
-body {
-    display: flex;
-    justify-content: center;
-}
-
 .main-container {
-    width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
@@ -30,6 +24,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
+    margin: auto;
 }
 
 .main-content { /* MINE - ajoute un gap entre search-section et accomodations-section */
@@ -61,7 +56,7 @@ body {
 
 .nav-link-accomodations, .nav-link-activities {
     display: block;
-    height: 76px; /* plus petit que 79px pour bloquer le decalage au survol */
+    height: 60px; /* plus petit que 79px pour bloquer le decalage au survol */
     border-top: 3px solid white; /* bloque le leger décalage au survol */
     line-height: 50px; /* 40 */
     text-decoration: none;
@@ -264,6 +259,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 30%; /* 33% est la dimension des img déja donnée ds le code */
+    
 }
 
 .accomodations-cards .card-img {
@@ -388,6 +384,8 @@ body {
 .footer-division {
     width: 33%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-title {
@@ -395,6 +393,19 @@ body {
     font-size: 18px;;
 }
 
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.footer-text {
+    text-decoration: none;
+    color: black;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
