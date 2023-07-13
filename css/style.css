@@ -27,7 +27,8 @@
     margin: auto;
 }
 
-.main-content { /* MINE - ajoute un gap entre search-section et accomodations-section */
+/****** MAIN ***********/
+.main-section { /* MINE - ajoute un gap entre les sections */
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -291,6 +292,11 @@
     font-size: 18px;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /****** POPULAR SECTION ***********/
 .popular-section {
@@ -377,7 +383,7 @@
 .footer-section {
     display: flex;
     justify-content: space-evenly;
-    background-color: #D9D9D9;
+    background-color: #F2F2F2;
     row-gap: 15px;
 }
 
@@ -390,7 +396,9 @@
 
 .footer-title {
     font-weight: bold;
-    font-size: 18px;;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .footer-list {
