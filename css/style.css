@@ -300,12 +300,21 @@
 
 /****** POPULAR SECTION ***********/
 .popular-section {
-    width: 32%;  
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  
+}
+
+.popular-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px; 
 }
 
 .popular-cards .card {
     display: flex;
-    margin-top: 33px;
 }
 
 .popular-cards .card-img {
@@ -349,7 +358,6 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    /* width: 100%; */
 }
 
 .activities-cards .card {
@@ -360,7 +368,8 @@
 }
 
 .activities-cards .card-img {
-    height: 100%; /* 380px; */
+    height: 420px; /* 100% // 380px; */
+    width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
