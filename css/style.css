@@ -17,6 +17,7 @@
 /****** BODY ***********/
 .main-container {
     max-width: 1440px;
+    min-width: 320px; /* utilité ? */
     padding: 0 50px;
     box-sizing: border-box;
     /* MINE - ajoute des gaps entre le header, le main et le footer */
@@ -167,6 +168,10 @@
 
 .filterbar-title {
     font-size: 18px;
+}
+
+.filterbar-buttonbox {
+    height: 100%;
 }
 
 .filterbar-button {
@@ -438,44 +443,85 @@
 }
 
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
+/****** MEDIA QUERIES ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-container {
+        max-width: 1024px;
+        min-width: 768px;
     }
-
-    .hebergements {
-        width: 100%;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
+    
+    /****** HEADER ***********/
+    .filterbar-rating {
         display: flex;
+        flex-direction: column;
+        height: 90px; /* 90px */
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .filterbar-buttonbox {
+        display: flex;
+        column-gap: 10px;
+    }
+   
+
+   
+    
+    /****** ACCOMODATIONS SECTION ***********/
+    .accomodations-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .accomodations-section {
+        width: 100%;
+    }
+
+    .popular-section {
+        width: 100%;
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    .popular-cards {
         flex-direction: row;
-        justify-content: space-between;
+        row-gap: 20px;
     }
 
-    .populaires-cards .card {
-        width: 30%;
+    .popular-cards .card-link {
+        width: 31%;
     }
 
-    .populaires-cards .card-title {
+    .popular-cards .card-content {
+        width: 100%; /* 183 px */
+    }
+
+    .popular-cards .card-title {
         font-size: 14px;
     }
 
-    .populaires-cards .card-subtitle {
+    .popular-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    /****** ACTIVITIES SECTION ***********/
+
+    .activities-cards .card {
+        height: 270px;
+    }
+
+    .activities-cards .card-img {
+        height: 200px;
+    }
+
+    .activities-cards .card-title {
+        margin: 0;
+        line-height: 12px;
     }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) and (min-width: 320px) {
     /* ... */
 }
