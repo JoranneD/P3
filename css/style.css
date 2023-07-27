@@ -629,15 +629,22 @@
 
     .popular-cards .card-img {
         width: 100%;
-        /* height: 136px; */
+        
     }
 
     .accomodations-cards .card {
         width: 100%;
     }
 
-    
+    .activities-cards {
+        flex-direction: column;
+    }
 
+    .activities-cards .card {
+        width: 100%;
+    }
 
-
+    .footer-section {
+        display: block;
+    }
 }
