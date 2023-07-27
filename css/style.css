@@ -132,6 +132,10 @@
     border: none;
 }
 
+.search-icon-button {
+    display: none;
+}
+
 .searchbar-label, .searchbar-input, .searchbar-button {
     height: 100%;
     font-size: 18px;
@@ -450,6 +454,10 @@
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (max-width: 1024px) {
     /****** HEADER ***********/
+    .search-icon-button {
+        display: none;
+    }
+
     .filterbar-rating {
         display: flex;
         flex-direction: column;
@@ -534,6 +542,10 @@
         width: 100%;
         text-align: center;
     }
+
+    .nav-list {
+        gap: 0;
+    }
     
    .nav-item {
         width: 50%;
@@ -562,46 +574,43 @@
         justify-content: center; /* 10 60 30 */
     }
 
-    .searchbar-label {
-        width: 10%;
+    .searchbar-button.search-button {
+        display: none;
     }
 
-    .searchbar-input {
-        width :80%;
-    }
-
-    .searchbar-button {
-        width: 10%;
-    }
-
+    
     .filterbar-rating, .filterbar-buttonbox {
         gap: 20px; 
     }
 
     .filterbar-buttonbox {
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
     }
 
     .filterbar-button {
         width: 45%;
     }
 
-    .icon-circle {
-
-    }
-
     .infoline {
         gap: 20px;
     }
 
-    .accomodations-section {
-        gap: 15px;
+    .accomodations-content {
+        flex-direction: column-reverse;
     }
 
     .accomodations-content section {
         padding: 30;
+        border-radius: 0px;
     }
+
+    .accomodations-section {
+        gap: 15px;
+        background-color: blue;
+    }
+
+    
 
     .popular-section {
         padding: 30px;
