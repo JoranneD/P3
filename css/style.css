@@ -134,6 +134,11 @@
 
 .search-icon-button {
     display: none;
+    width: 50px;
+}
+
+.fa-solid.fa-magnifying-glass {
+    color: #F2F2F2;
 }
 
 .searchbar-label, .searchbar-input, .searchbar-button {
@@ -147,7 +152,8 @@
 }
 
 .searchbar i, .searchbar ::placeholder {
-    color: black; 
+    color: black;
+    opacity: 1;
 }
 
 .searchbar-input:focus::placeholder {
@@ -571,14 +577,17 @@
     }
 
     .searchbar {
-        justify-content: center; /* 10 60 30 */
+        justify-content: center; /* start */
     }
 
-    .searchbar-button.search-button {
+    .search-button {
         display: none;
     }
 
-    
+    .search-icon-button {
+        display: block;
+    }
+
     .filterbar-rating, .filterbar-buttonbox {
         gap: 20px; 
     }
@@ -592,10 +601,6 @@
         width: 45%;
     }
 
-    .infoline {
-        gap: 20px;
-    }
-
     .accomodations-content {
         flex-direction: column-reverse;
     }
@@ -605,18 +610,16 @@
         border-radius: 0px;
     }
 
-    .accomodations-section {
+    .accomodations-content .accomodations-section {
         gap: 15px;
-        background-color: blue;
+        background-color: white;
     }
-
-    
 
     .popular-section {
         padding: 30px;
     }
 
-    .popular-cards {
+    .popular-cards  {
         flex-wrap: wrap;
     }
 
@@ -627,6 +630,10 @@
     .popular-cards .card-img {
         width: 100%;
         /* height: 136px; */
+    }
+
+    .accomodations-cards .card {
+        width: 100%;
     }
 
     
