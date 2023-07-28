@@ -17,7 +17,7 @@
 /****** BODY ***********/
 .main-container {
     max-width: 1440px;
-    min-width: 320px; /* utilité ? */
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
     /* MINE - ajoute des gaps entre le header, le main et le footer */
@@ -62,7 +62,7 @@
     display: block;
     height: 60px; /* plus petit que 79px pour bloquer le decalage au survol */
     border-top: 3px solid white; /* bloque le leger décalage au survol */
-    line-height: 50px; /* 40 */
+    line-height: 50px;
     text-decoration: none;
     font-size: 16px;
     padding-top: 16px;
@@ -77,7 +77,6 @@
 .fa-xs.fa-solid.fa-star.neutral-star {
     color: #F2F2F2;
 }
-
 
 /****** SEARCH SECTION ***********/
 .search-section {
@@ -132,6 +131,15 @@
     border: none;
 }
 
+.search-icon-button {
+    display: none;
+    width: 50px;
+}
+
+.fa-solid.fa-magnifying-glass {
+    color: #F2F2F2;
+}
+
 .searchbar-label, .searchbar-input, .searchbar-button {
     height: 100%;
     font-size: 18px;
@@ -143,7 +151,8 @@
 }
 
 .searchbar i, .searchbar ::placeholder {
-    color: black; 
+    color: black;
+    opacity: 1;
 }
 
 .searchbar-input:focus::placeholder {
@@ -154,16 +163,11 @@
     outline: none;
 }
 
-.filterbar {
-    /* height: 50px; */
-}
-
 .filterbar-rating {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    /* height: 100%; */
     gap: 15px;
 }
 
@@ -176,9 +180,8 @@
 }
 
 .filterbar-button {
-    /* width: 173px; */
     border-radius: 25px;
-    height: 50px; /* height: 100%; */
+    height: 50px;
     font-size: 17px;
     font-weight: bold;
     border: 1px solid  #F2F2F2;
@@ -231,7 +234,7 @@
 
 .accomodations-section {
     width: 65%;
-    /* MINE - code permettant  */
+    /* MINE */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -281,7 +284,7 @@
 .accomodations-cards .card {
     display: flex;
     flex-direction: column;
-    width: 30%; /* 33% est la dimension des img déja donnée ds le code */
+    width: 30%;
 }
 
 .accomodations-cards .card-img {
@@ -317,7 +320,6 @@
     text-decoration: none;
     color: inherit;
 }
-
 
 /****** POPULAR SECTION ***********/
 .popular-section {
@@ -389,7 +391,7 @@
 }
 
 .activities-cards .card-img {
-    height: 420px; /* 100% // 380px; */
+    height: 420px;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -449,7 +451,12 @@
 /****** MEDIA QUERIES ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (max-width: 1024px) {
-    /****** HEADER ***********/
+
+    /****** SEARCH SECTION ***********/
+    .search-icon-button {
+        display: none;
+    }
+
     .filterbar-rating {
         display: flex;
         flex-direction: column;
@@ -462,7 +469,7 @@
         column-gap: 10px;
     }
    
-    /****** ACCOMODATIONS SECTION ***********/
+    /****** ACCOMODATIONS AND POPULAR SECTION ***********/
     .accomodations-content {
         flex-direction: column;
         gap: 50px;
@@ -500,7 +507,6 @@
     }
 
     /****** ACTIVITIES SECTION ***********/
-
     .activities-cards .card-img {
         height: 200px; /* 200 270px */
     }
@@ -517,7 +523,13 @@
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
-    
+
+    /****** BODY ***********/
+    .main-container{
+        padding: 0px;
+    }
+
+    /****** HEADER ***********/
     .header-section {
         flex-direction: column;
         height: auto;
@@ -530,6 +542,10 @@
     .navbar {
         width: 100%;
         text-align: center;
+    }
+
+    .nav-list {
+        gap: 0;
     }
     
    .nav-item {
@@ -550,16 +566,87 @@
         color: #0065FC;
     }
 
-    .headline-title {
-        font-weight: bold;
-        font-size: 40px;
-    }
-
-    .headline-text {
-        font-size: 22px;
+    /****** SEARCH SECTION ***********/
+    .search-section {
+        padding: 0px 20px;
+        width: inherit;
     }
 
     .searchbar {
+        justify-content: start;
+    }
+
+    .search-button {
+        display: none;
+    }
+
+    .search-icon-button {
+        display: block;
+    }
+
+    .filterbar-rating, .filterbar-buttonbox {
+        gap: 20px; 
+    }
+
+    .filterbar-buttonbox {
+        flex-wrap: wrap;
+    }
+
+    .filterbar-button {
+        width: 45%;
+    }
+
+    /****** ACCOMODATIONS AND POPULAR SECTION ***********/
+    .accomodations-content {
+        flex-direction: column-reverse;
+    }
+
+    .accomodations-content section {
+        padding: 30;
+        border-radius: 0px;
+    }
+
+    .accomodations-content .accomodations-section {
+        gap: 15px;
+        background-color: white;
+    }
+
+    .popular-section {
+        padding: 30px;
+    }
+
+    .popular-cards  {
+        flex-wrap: wrap;
+    }
+
+    .popular-cards .card-link {
+        width: 100%;
+    }
+
+    .popular-cards .card-img {
+        width: 100%;
+        
+    }
+
+    .accomodations-cards .card {
+        width: 100%;
+    }
+
+    /****** ACTIVITIES SECTION ***********/
+    .activities-cards {
+        flex-direction: column;
+    }
+
+    .activities-cards .card {
+        width: 100%;
+    }
+
+    /****** FOOTER SECTION ***********/
+    .footer-section {
+        display: block;
+    }
+
+    .footer-division {
         width: 100%;
     }
 }
