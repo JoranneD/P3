@@ -17,7 +17,7 @@
 /****** BODY ***********/
 .main-container {
     max-width: 1440px;
-    min-width: 320px; /* utilité ? */
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
     /* MINE - ajoute des gaps entre le header, le main et le footer */
@@ -62,7 +62,7 @@
     display: block;
     height: 60px; /* plus petit que 79px pour bloquer le decalage au survol */
     border-top: 3px solid white; /* bloque le leger décalage au survol */
-    line-height: 50px; /* 40 */
+    line-height: 50px;
     text-decoration: none;
     font-size: 16px;
     padding-top: 16px;
@@ -77,7 +77,6 @@
 .fa-xs.fa-solid.fa-star.neutral-star {
     color: #F2F2F2;
 }
-
 
 /****** SEARCH SECTION ***********/
 .search-section {
@@ -164,16 +163,11 @@
     outline: none;
 }
 
-.filterbar {
-    /* height: 50px; */
-}
-
 .filterbar-rating {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    /* height: 100%; */
     gap: 15px;
 }
 
@@ -186,9 +180,8 @@
 }
 
 .filterbar-button {
-    /* width: 173px; */
     border-radius: 25px;
-    height: 50px; /* height: 100%; */
+    height: 50px;
     font-size: 17px;
     font-weight: bold;
     border: 1px solid  #F2F2F2;
@@ -241,7 +234,7 @@
 
 .accomodations-section {
     width: 65%;
-    /* MINE - code permettant  */
+    /* MINE */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -291,7 +284,7 @@
 .accomodations-cards .card {
     display: flex;
     flex-direction: column;
-    width: 30%; /* 33% est la dimension des img déja donnée ds le code */
+    width: 30%;
 }
 
 .accomodations-cards .card-img {
@@ -327,7 +320,6 @@
     text-decoration: none;
     color: inherit;
 }
-
 
 /****** POPULAR SECTION ***********/
 .popular-section {
@@ -399,7 +391,7 @@
 }
 
 .activities-cards .card-img {
-    height: 420px; /* 100% // 380px; */
+    height: 420px;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -459,7 +451,8 @@
 /****** MEDIA QUERIES ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media screen and (max-width: 1024px) {
-    /****** HEADER ***********/
+
+    /****** SEARCH SECTION ***********/
     .search-icon-button {
         display: none;
     }
@@ -476,7 +469,7 @@
         column-gap: 10px;
     }
    
-    /****** ACCOMODATIONS SECTION ***********/
+    /****** ACCOMODATIONS AND POPULAR SECTION ***********/
     .accomodations-content {
         flex-direction: column;
         gap: 50px;
@@ -514,7 +507,6 @@
     }
 
     /****** ACTIVITIES SECTION ***********/
-
     .activities-cards .card-img {
         height: 200px; /* 200 270px */
     }
@@ -531,10 +523,13 @@
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
+
+    /****** BODY ***********/
     .main-container{
         padding: 0px;
     }
 
+    /****** HEADER ***********/
     .header-section {
         flex-direction: column;
         height: auto;
@@ -571,13 +566,14 @@
         color: #0065FC;
     }
 
+    /****** SEARCH SECTION ***********/
     .search-section {
         padding: 0px 20px;
         width: inherit;
     }
 
     .searchbar {
-        justify-content: center; /* start */
+        justify-content: start;
     }
 
     .search-button {
@@ -594,13 +590,13 @@
 
     .filterbar-buttonbox {
         flex-wrap: wrap;
-        /* justify-content: center; */
     }
 
     .filterbar-button {
         width: 45%;
     }
 
+    /****** ACCOMODATIONS AND POPULAR SECTION ***********/
     .accomodations-content {
         flex-direction: column-reverse;
     }
@@ -636,6 +632,7 @@
         width: 100%;
     }
 
+    /****** ACTIVITIES SECTION ***********/
     .activities-cards {
         flex-direction: column;
     }
@@ -644,7 +641,12 @@
         width: 100%;
     }
 
+    /****** FOOTER SECTION ***********/
     .footer-section {
         display: block;
+    }
+
+    .footer-division {
+        width: 100%;
     }
 }
