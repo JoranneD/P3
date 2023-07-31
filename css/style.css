@@ -646,6 +646,6 @@
     }
 
     .footer-division {
-        width: 100%;
+        width: inherit;
     }
 }
